@@ -1,0 +1,63 @@
+logs/
+# Игнорировать файлы и директории, созданные Python
+
+# Системные файлы и каталоги
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C расширения
+*.so
+
+# Виртуальное окружение
+venv/
+
+# Игнорировать файлы, созданные Poetry
+# (__pypackages__, .venv, poetry.lock, *.egg-info)
+__pypackages__/
+.venv/
+*.egg-info/
+
+# Игнорировать файлы, созданные Node.js
+
+# Зависимости Node.js
+node_modules/
+
+# Игнорировать файлы, созданные Yarn
+# (.pnp.js, .pnp.cjs, .yarnrc.yml, yarn.lock)
+.pnp.js
+.pnp.cjs
+.yarnrc.yml
+yarn.lock
+
+# Игнорировать файлы и директории, созданные Vue.js
+/dist/
+/node_modules/
+
+# Игнорировать файлы и директории, созданные Docker
+.docker/
+.dockerignore
+
+# Игнорировать файлы и директории, созданные редакторами кода
+.vscode/
+.idea/
+.mypy_cache/
+.ruff_cache/
+
+# Директория с БД
+/data/db/
+
+# Директория загруженных файлов
+/backend/src/files/
+uploads/
+# Исключение: иконки подразделений должны остаться в репозитории  
+!uploads/division_avatars/
+
+# Директория с собранным приложением
+/build/*
+logs/errors.log
+
+CLAUDE.md
+
+# Local Docker environment file
+/docker.env
