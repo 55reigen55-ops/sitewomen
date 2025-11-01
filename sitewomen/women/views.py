@@ -21,7 +21,6 @@ data_db = [
 ]
 
 
-
 def index(request):
     posts = Women.published.all()
 
@@ -66,13 +65,13 @@ def login(request):
 def show_category(request, cat_slug):
     category = get_object_or_404(Category, slug=cat_slug)
     posts = Women.published.filter(cat_id=category.pk)
+
     data = {
         'title': f'Рубрика: {category.name}',
         'menu': menu,
         'posts': posts,
         'cat_selected': category.pk,
     }
-
     return render(request, 'women/index.html', context=data)
 
 
